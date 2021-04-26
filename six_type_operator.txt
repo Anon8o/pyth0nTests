@@ -1,0 +1,43 @@
+a = 300
+b = 50
+
+#1.Arithmatic Operator
+a + b
+a - b
+a * b
+a / b
+a ** b
+a // b
+a % b
+
+#2.Composian Operator
+a == b
+a != b
+a > b
+a < b
+a >= b
+a <= b
+
+#3.Assighnment Operator
+a = b
+a += b
+a -= b
+a *= b
+a /= b
+
+#4.Logical Operator
+a and b
+a or b
+a or not b
+a and not b
+
+#5.Membership Operator
+a = str(a)
+b = str(b)
+
+a in b
+a not in b
+
+#6.Identity Operator
+a is b
+a is not b
