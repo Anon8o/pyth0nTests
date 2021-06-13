@@ -193,3 +193,151 @@ b = "AlaSka"
 
 print(a[4:], b[3:6])
 print(a[:3], b[3:])
+
+# numpy tests
+import numpy as np
+
+x = np.array([[[8,6,4,2]]], dtype='int8')
+y = np.array([[[9,7,5,3]]])
+
+print(x.dtype)
+print(x.ndim)
+print(x.shape)
+print(x.size * x.itemsize)
+print(x.nbytes)
+print(x.dtype, y.dtype)
+
+print((x - y) - y)
+
+
+# Chapter-7 (List)
+
+a = ['Safik', 'Mamun']
+a.append('Mehejabin')
+a.insert(2, 'Masud')
+a = a + ["Liya", 'Eva', 'Riyad']
+del a[6]
+a.insert(3, 'Riyad')
+a[0] = 'Anonto'
+
+# dividing the list using gender
+boys = (a[0], a[1], a[2], a[3])
+girls = (a[4], a[5], a[6])
+print(girls, boys)
+print('in our gang, we have', len(boys), 'Boys &', \
+len(girls), 'Girls. And the names are-\n',(boys+girls))
+
+print(len(a))
+
+m = [500, 600, 700, 900]
+# .pop() remove the last item of List
+m.pop()
+
+# remove() use as removing any specifc item
+m.remove(700)
+
+# append() use as inserting any item on list (appears in the end)
+m.append(69)
+
+# insert() use as inseting any item on any specific pos in List
+m.insert(0, 696)
+
+# (del) use as deleting any item from list (specific)
+del m[-1]
+
+# (+) in order to adding items on the list (+) can be used
+m = m + [3.1416, 2000, 121, 75, 500, 600, 700, "Anonto"]
+
+# .count() use as count all the possible match of any specific item
+print(m.count(500))
+
+print(m)
+int = [1, 4, 5, 7, 9, 0]
+str = ['s', 'm', 'a', 'w', 'q']
+
+# sort() use as sorting ascending
+int.sort()
+print(int)
+
+str.sort()
+# reverse() in order to work reverse the list, it must sort first
+str.reverse()
+print(str)
+
+# reverse() statment reverse whatever the itom in list.
+# it does not follows any ascending or descending protocols.
+
+a = [-2, 0, -0.01, -0, 2.1, 5, 9, -1, -10]
+a.sort()
+a.reverse()
+print(a)
+
+a_d = [-2, 0, -0.01, -0, 2.1, 5, 9, -1, -10]
+print(a_d)
+a_d.reverse()
+print(a_d)
+
+
+# accessing list elements "Sem-Final Result-19"
+# indications: n = Name; c = CGPA; r = Roll.
+n = ['Anonto', 'Masud', 'Mamun', 'Mehejabin', 'Eva']
+r = [255810, 914659, 928190, 928206, 928268]
+c = [3.00, 3.04, 2.86, 3.08, 2.50]
+
+print(
+"\"\"The Result of Semester Final Exam, Held in 2019!\"\" \nHere's \
+Few Student's Name:Roll:CGPA.\n\nName        ", "Roll       ", \
+"CGPA       "
+)
+
+print(
+n[0], '\t   ', r[0], '\t', c[0],'\
+\n' + n[1], '\t   ', r[2], '\t', c[3],'\
+\n' + n[2], '\t   ', r[1], '\t', c[1],'\
+\n' + n[3], ' ', r[3], '\t', c[4],'\
+\n' + n[4], '\t   ', r[4], '\t', c[2]
+)
+
+
+# Accessing Tuple elements
+# Tuple Indications: Name(n); Roll(r); CGPA(c)
+
+n = ('Mehejabin', 'Eva', 'Masud', 'Mamun', 'Anonto')
+r = (255810, 914659, 928206, 928190, 928268)
+c = (3.00, 3.04, 3.08, 2.86, 2.50)
+print(type(n), type(r), type(c))
+
+print(
+'"Semester Final Result-2019"',
+'\nData will be distribute in the Following Formation!\
+\nName:Roll:CGPA''\n'
+)
+
+print("Name", '\t\t', "Roll", '\t\t', "CGPA"
+'\n' + n[0], '\t', r[2], '\t', c[4],
+'\n' + n[1], '\t\t', r[4], '\t', c[3],
+'\n' + n[2], '\t\t', r[3], '\t', c[2],
+'\n' + n[3], '\t\t', r[1], '\t', c[1],
+'\n' + n[4], '\t\t', r[0], '\t', c[0])
+
+
+# Making a Table using the "Data Type(List)"
+# list indications: n=Name; r=Roll; d=Birthdate; m=BirthMonth; y=BirthYear; c=CGPA
+
+n = ['Anonto', 'Mamun', 'Masud', 'Liya', 'Mehejabin', 'Eva']
+r = [928206, 928208, 928190, 914659, 255810, 928268]
+d = [10, 20, 29, 4, 8]
+m = ['Nov', 'Jan', 'Apr', 'Jul']
+y = [2000, 2001, 1999]
+c = [3.00, 3.04, 3.08, 2.50, 3.33, 2.86]
+
+print('Making a Table of Few Perticular Students, With the Following Data-'\
+      '\n' + '"Name:Roll:Birthdate:CGPA",\n')
+print("Name", '\t\t', "Roll", '\t\t', "BirthDate", '\t\t', "CGPA")
+
+print(n[0], '\t\t', r[4], '\t', d[0], m[0], y[0], '\t\t', c[0],
+'\n' + n[1], '\t\t', r[3], '\t', d[1], m[1], y[2], '\t\t', c[1],
+'\n' + n[2], '\t\t', r[2], '\t', d[2], m[0], y[1], '\t\t', c[2],
+'\n' + n[3], '\t\t', r[1], '\t', d[1], m[2], y[0], '\t\t', c[4],
+'\n' + n[4], '\t', r[0], '\t', d[3], m[3], y[1], '\t\t', c[3],
+'\n' + n[5], '\t\t', r[5], '\t', d[4], m[2], y[2], '\t\t', c[5])
